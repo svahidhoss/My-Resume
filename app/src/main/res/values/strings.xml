@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Resume</string>
+
+    <!--Navigation Drawer Values-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_drawer_contact_item">Contact Vahid</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="nav_drawer_communicate_menu_item">Communicate</string>
+    <string name="summary">Summary</string>
+    <string name="nav_drawer_experience_item">Experience</string>
+    <string name="nav_drawer_education_item">Education</string>
+    <string name="nav_drawer_certificates_item">Certificates</string>
+    <string name="nav_drawer_skills_item">Skills</string>
+</resources>
