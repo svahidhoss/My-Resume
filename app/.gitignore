@@ -1,1 +1,21 @@
-/build
+# Gradle files
+.gradle/
+build/
+
+# Intellij IDEA
+/local.properties
+/.idea
+*.iml
+*.iws
+
+
+/app/build
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Mac OS X clutter
+*.DS_Store
+
+# Windows clutter
+Thumbs.db
