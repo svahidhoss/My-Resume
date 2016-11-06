@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,15 +14,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.vahid.myresume.util.ActivityUtil;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     // Used for exiting on pressing back double
     private boolean doubleBackToExitIsPressedOnce = false;
     private static final int BACK_PRESS_TIME = 2000; // 2s
+
+    // View Elements
+    private TextView tvTitle, tvContents;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +35,11 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        tvTitle = (TextView) findViewById(R.id.tv_title);
+        tvContents = (TextView) findViewById(R.id.tv_contents);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
-                sendEmailToVahid();
-            }
-        });
+        fab.setOnClickListener(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -108,16 +107,26 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         switch (item.getItemId()) {
             case R.id.nav_summary:
+                tvTitle.setText(getString(R.string.nav_drawer_summary_item));
+                tvContents.setText(getString(R.string.contents_summary));
                 break;
             /*case R.id.nav_gallery: // Handle the camera action
                 break;*/
             case R.id.nav_experience:
+                tvTitle.setText(getString(R.string.nav_drawer_experience_item));
+                tvContents.setText(getString(R.string.contents_experience));
                 break;
             case R.id.nav_education:
+                tvTitle.setText(getString(R.string.nav_drawer_education_item));
+                tvContents.setText(getString(R.string.contents_education));
                 break;
             case R.id.nav_certificates:
+                tvTitle.setText(getString(R.string.nav_drawer_certificates_item));
+                tvContents.setText(getString(R.string.contents_certificates));
                 break;
             case R.id.nav_skills:
+                tvTitle.setText(getString(R.string.nav_drawer_skills_item));
+                tvContents.setText(getString(R.string.contents_skills));
                 break;
             case R.id.nav_contact:
                 break;
@@ -143,5 +152,16 @@ public class MainActivity extends AppCompatActivity
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Networking Opportunity");
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Dear Vahid,\n");
         startActivity(Intent.createChooser(emailIntent, "Send email..."));
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.fab:
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+                sendEmailToVahid();
+                break;
+        }
     }
 }
