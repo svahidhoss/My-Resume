@@ -3,6 +3,7 @@ package com.example.vahid.myresume;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -15,8 +16,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.vahid.myresume.util.ActivityUtil;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    // Used for exiting on pressing back double
+    private boolean doubleBackToExitIsPressedOnce = false;
+    private static final int BACK_PRESS_TIME = 2000; // 2s
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +52,30 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    /**
+     * Using the following function of "clicking TWICE the back button to exit
+     * app" has been implemented.
+     */
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+
+            if (doubleBackToExitIsPressedOnce) {
+                super.onBackPressed();
+                return;
+            }
+            this.doubleBackToExitIsPressedOnce = true;
+            ActivityUtil.toastShortMessage(this, getString(R.string.activity_main_exit_msg));
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitIsPressedOnce = false;
+                }
+            }, BACK_PRESS_TIME);
         }
     }
 
@@ -99,7 +123,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_linkedin:
                 // TODO: Move the URI, provide webview inside the app
-                Uri uri = Uri.parse("https://ca.linkedin.com/in/vahid-hosseinioun-054b6566");
+                Uri uri = Uri.parse(getString(R.string.my_linkedin_address));
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
                 break;

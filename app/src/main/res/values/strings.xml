@@ -2,8 +2,10 @@
     <!--General Strings-->
     <string name="app_name">My Resume</string>
     <string name="my_email_address">vahid.hoss@outlook.com</string>
+    <string name="my_linkedin_address">"https://ca.linkedin.com/in/vahid-hosseinioun-054b6566</string>
 
-
+    <!-- Main activity.-->
+    <string name="activity_main_exit_msg">Press BACK again to exit</string>
     <string name="action_settings">Settings</string>
 
     <!--Navigation Drawer Values-->
