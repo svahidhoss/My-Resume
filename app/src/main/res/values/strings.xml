@@ -14,4 +14,8 @@
     <string name="nav_drawer_certificates_item">Certificates</string>
     <string name="nav_drawer_skills_item">Skills</string>
     <string name="nav_drawer_linkedin_item">Vahid\'s LinkedIn</string>
+    <string name="summary">• App Ninja: Created 5+ fully functional applications for Android and iOS
+        devices in both software industry and academia\n• Known for writing efficient, maintainable
+        and reusable code\n• Proficient in design, data structures, problem-solving, and debugging</string>
+    <string name="email_address">vahid.hoss@outlook.com</string>
 </resources>

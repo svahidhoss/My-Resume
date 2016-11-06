@@ -1,5 +1,7 @@
 package com.example.vahid.myresume;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -92,6 +94,11 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_contact) {
 
+        } else if (id == R.id.nav_linkedin) {
+            // TODO: Move the URI, provide webview inside the app
+            Uri uri = Uri.parse("https://ca.linkedin.com/in/vahid-hosseinioun-054b6566");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
