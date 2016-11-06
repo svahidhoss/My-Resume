@@ -29,8 +29,9 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+                sendEmailToVahid();
             }
         });
 
@@ -79,30 +80,44 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_summary) {
-            // Handle the camera action
-        // } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_education) {
-
-        } else if (id == R.id.nav_certificates) {
-
-        } else if (id == R.id.nav_skills) {
-
-        } else if (id == R.id.nav_contact) {
-
-        } else if (id == R.id.nav_linkedin) {
-            // TODO: Move the URI, provide webview inside the app
-            Uri uri = Uri.parse("https://ca.linkedin.com/in/vahid-hosseinioun-054b6566");
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);
+        switch (item.getItemId()) {
+            case R.id.nav_summary:
+                break;
+            /*case R.id.nav_gallery: // Handle the camera action
+                break;*/
+            case R.id.nav_experience:
+                break;
+            case R.id.nav_education:
+                break;
+            case R.id.nav_certificates:
+                break;
+            case R.id.nav_skills:
+                break;
+            case R.id.nav_contact:
+                break;
+            case R.id.nav_linkedin:
+                // TODO: Move the URI, provide webview inside the app
+                Uri uri = Uri.parse("https://ca.linkedin.com/in/vahid-hosseinioun-054b6566");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    /**
+     * Sends an email to Vahid by calling the mailto intent .
+     */
+    private void sendEmailToVahid() {
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                "mailto", getString(R.string.my_email_address), null));
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Networking Opportunity");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Dear Vahid,\n");
+        startActivity(Intent.createChooser(emailIntent, "Send email..."));
     }
 }
