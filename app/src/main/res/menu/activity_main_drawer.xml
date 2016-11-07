@@ -31,6 +31,10 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/nav_drawer_contact_item" />
             <item
+                android:id="@+id/nav_call"
+                android:icon="@drawable/icon_phone"
+                android:title="@string/nav_drawer_call_item" />
+            <item
                 android:id="@+id/nav_linkedin"
                 android:icon="@drawable/icon_linkedin_filled"
                 android:title="@string/nav_drawer_linkedin_item" />

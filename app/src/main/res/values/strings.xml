@@ -24,9 +24,22 @@
         devices in both software industry and academia\n• Known for writing efficient, maintainable
         and reusable code\n• Proficient in design, data structures, problem-solving, and debugging</string>
 
-    <string name="contents_experience">Media-X Systems Inc.\nOctober 2015 – August 2016 (11 months)Ottawa\nMobile developer (Android and iOS), UI and UX design\n
-        •	Designed and implemented the iCoach Mobile (tm) app that allows users to record, upload and manage videos directly from their device to their iCoach account and also it allows them invite feedback. (https://play.google.com/store/apps/details?id=com.media_x.icoach)\n
-        •	Web development (REST APIs)</string>
+    <string name="contents_experience">Media-X Systems Inc.\n
+        •	October 2015 – August 2016 (11 months)Ottawa\n
+        •	Mobile developer (Android and iOS), UI and UX design\n
+        •	Designed and implemented the iCoach Mobile app that allows users to record, upload and manage videos directly from their device to their iCoach account and also it allows them invite feedback. (https://play.google.com/store/apps/details?id=com.media_x.icoach)\n
+        •	Web development (REST APIs)\n\n
+    Research Assistant uOttawa\n
+        •	September 2013 – August 2015 (2 years)Ottawa, Canada Area\n
+        •	Developed several application prototypes\n
+        •	Conducted literature reviews, Collected and analyzed data\n
+        •	Attended regular project meetings and conferences\n
+        •	Prepared progress reports, articles, papers, and presentations\n\n
+    Internship - Software Developer at Biopeak\n
+        •	May 2013 – August 2013, Ottawa\n
+        •	Android app development, Web service and Cloud Database management based on Service Oriented Architecture.\n
+        •	Biopeak: A Real-time Physiological Performance Display app that communicate to Biopeak "BioFusion physiology status monitor"* through bluetooth to be able to display Physiological Performances such as ECG, GSR, temperature and Heart-Rate real-time while semding these data to the cloud for later analysis and storage.\n
+    </string>
     <string name="contents_education">University of Ottawa / Université d\'Ottawa\nMasters of Applied Science (M.Sc.), Computer Engineering\n2013 – 2015\n\n
     Ferdowsi University of Mashhad\nBachelor of Science (BSc), Computer Software Engineering\n2008 – 2012</string>
     <string name="contents_certificates">Algorithmic Toolbox\nCoursera Course Certificates, License NMU4TKUZ847D\nStarting July 2016</string>
@@ -36,4 +49,6 @@
         •	Technologies:		Git/Subversion, web Services (SOAP, REST), Jira, Gradle, UIKit, Auto Layout\n
         •	Database:		    MySQL, PostgreSQL, MongoDB, SQLite
 </string>
+    <string name="nav_drawer_call_item">Call Vahid</string>
+    <string name="phone_number">tel:6132620131</string>
 </resources>
