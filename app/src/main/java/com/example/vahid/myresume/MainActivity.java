@@ -1,6 +1,8 @@
 package com.example.vahid.myresume;
 
 import android.Manifest;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -29,7 +31,8 @@ public class MainActivity extends AppCompatActivity
     private static final int BACK_PRESS_TIME = 2000; // 2s
 
     // View Elements
-    private TextView tvTitle, tvContents;
+    private TextView mTvTitle, mTvContents;
+    private FloatingActionButton mFab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +41,11 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        tvTitle = (TextView) findViewById(R.id.tv_title);
-        tvContents = (TextView) findViewById(R.id.tv_contents);
+        mTvTitle = (TextView) findViewById(R.id.tv_title);
+        mTvContents = (TextView) findViewById(R.id.tv_contents);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(this);
+        mFab = (FloatingActionButton) findViewById(R.id.fab);
+        mFab.setOnClickListener(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -52,6 +55,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Start fragment
+        // startFragment(ResumeFragment.TAG);
     }
 
     /**
@@ -110,26 +116,26 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         switch (item.getItemId()) {
             case R.id.nav_summary:
-                tvTitle.setText(getString(R.string.nav_drawer_summary_item));
-                tvContents.setText(getString(R.string.contents_summary));
+                mTvTitle.setText(getString(R.string.nav_drawer_summary_item));
+                mTvContents.setText(getString(R.string.contents_summary));
                 break;
             /*case R.id.nav_gallery: // Handle the camera action
                 break;*/
             case R.id.nav_experience:
-                tvTitle.setText(getString(R.string.nav_drawer_experience_item));
-                tvContents.setText(getString(R.string.contents_experience));
+                mTvTitle.setText(getString(R.string.nav_drawer_experience_item));
+                mTvContents.setText(getString(R.string.contents_experience));
                 break;
             case R.id.nav_education:
-                tvTitle.setText(getString(R.string.nav_drawer_education_item));
-                tvContents.setText(getString(R.string.contents_education));
+                mTvTitle.setText(getString(R.string.nav_drawer_education_item));
+                mTvContents.setText(getString(R.string.contents_education));
                 break;
             case R.id.nav_certificates:
-                tvTitle.setText(getString(R.string.nav_drawer_certificates_item));
-                tvContents.setText(getString(R.string.contents_certificates));
+                mTvTitle.setText(getString(R.string.nav_drawer_certificates_item));
+                mTvContents.setText(getString(R.string.contents_certificates));
                 break;
             case R.id.nav_skills:
-                tvTitle.setText(getString(R.string.nav_drawer_skills_item));
-                tvContents.setText(getString(R.string.contents_skills));
+                mTvTitle.setText(getString(R.string.nav_drawer_skills_item));
+                mTvContents.setText(getString(R.string.contents_skills));
                 break;
             case R.id.nav_contact:
                 sendEmailToVahid();
@@ -190,4 +196,36 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
+
+
+    /**
+     * Adds the video listing or upload video fragments to this activity.
+     *
+     * @param fragmentName Contains the fragment tag to identify the fragment.
+     */
+    /*private void startFragment(final String fragmentName) {
+        Fragment startingFragment;
+        switch (fragmentName) {
+            case ResumeFragment.TAG:
+                // redisplay the upload mFab
+                mFab.setVisibility(View.VISIBLE);
+                startingFragment = new ResumeFragment();
+                // change title
+                // setTitle(R.string.activity_main_drawer_title);
+                break;
+            default:
+                // exit
+                return;
+        }
+
+
+        // Asking the FragmentManager if the Fragment is already added:
+        FragmentManager fragmentManager = getFragmentManager();
+        Fragment fragment = fragmentManager.findFragmentByTag(fragmentName);
+        if (fragment == null) {
+            // fragment must be added
+            fragmentManager.beginTransaction().replace(R.id.frame_layout_container, startingFragment,
+                    fragmentName).commit();
+        }
+    }*/
 }

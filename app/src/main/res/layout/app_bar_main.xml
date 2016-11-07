@@ -8,6 +8,12 @@
     tools:context="com.example.vahid.myresume.MainActivity">
 
     <include layout="@layout/content_main" />
+    <!--<FrameLayout
+        android:id="@+id/frame_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar_layout"
+        android:paddingTop="?attr/actionBarSize"/>-->
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
