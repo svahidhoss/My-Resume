@@ -40,8 +40,8 @@
         •	Android app development, Web service and Cloud Database management based on Service Oriented Architecture.\n
         •	Biopeak: A Real-time Physiological Performance Display app that communicate to Biopeak "BioFusion physiology status monitor"* through bluetooth to be able to display Physiological Performances such as ECG, GSR, temperature and Heart-Rate real-time while semding these data to the cloud for later analysis and storage.\n
     </string>
-    <string name="contents_education">University of Ottawa / Université d\'Ottawa\nMasters of Applied Science (M.Sc.), Computer Engineering\n2013 – 2015\n\n
-    Ferdowsi University of Mashhad\nBachelor of Science (BSc), Computer Software Engineering\n2008 – 2012</string>
+    <string name="contents_education">•	University of Ottawa / Université d\'Ottawa\nMasters of Applied Science (M.Sc.), Computer Engineering\n2013 – 2015\n\n
+    •	Ferdowsi University of Mashhad\nBachelor of Science (BSc), Computer Software Engineering\n2008 – 2012</string>
     <string name="contents_certificates">Algorithmic Toolbox\nCoursera Course Certificates, License NMU4TKUZ847D\nStarting July 2016</string>
     <string name="contents_skills">•	Programming:	Java, C++, Swift, JavaScript, HTML, CSS\n
         •	Operating Systems:	MS Windows, UNIX/Linux, Mac OSX\n
