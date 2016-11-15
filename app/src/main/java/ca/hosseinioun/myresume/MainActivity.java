@@ -1,4 +1,4 @@
-package com.vahid.myresume;
+package ca.hosseinioun.myresume;
 
 import android.Manifest;
 import android.content.Intent;
@@ -19,8 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.example.vahid.myresume.R;
-import com.vahid.myresume.util.ActivityUtil;
+import ca.hosseinioun.myresume.util.ActivityUtil;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {

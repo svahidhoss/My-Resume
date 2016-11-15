@@ -1,4 +1,4 @@
-package com.vahid.myresume.util;
+package ca.hosseinioun.myresume.util;
 
 import android.Manifest;
 import android.app.Activity;
