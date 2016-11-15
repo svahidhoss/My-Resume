@@ -1,8 +1,6 @@
-package com.example.vahid.myresume;
+package com.vahid.myresume;
 
 import android.Manifest;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -21,7 +19,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.example.vahid.myresume.util.ActivityUtil;
+import com.example.vahid.myresume.R;
+import com.vahid.myresume.util.ActivityUtil;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {

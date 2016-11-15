@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:layout_below="@+id/bar_layout"
-    tools:context="com.example.vahid.myresume.MainActivity">
+    tools:context="com.example.vahid.myresume.com.vahid.myresume.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

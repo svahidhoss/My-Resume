@@ -1,4 +1,4 @@
-package com.example.vahid.myresume;
+package com.vahid.myresume;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -17,7 +17,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SimpleAdapter;
 
-import com.example.vahid.myresume.util.ActivityUtil;
+import com.example.vahid.myresume.R;
+import com.vahid.myresume.util.ActivityUtil;
 
 
 /**
